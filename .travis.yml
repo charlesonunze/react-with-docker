@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install: 
-  - docker build -f Dockerfile.dev -t charlesonunze/react-with-react .
+  - docker build -f Dockerfile.dev -t charlesonunze/react-with-docker .
 
 script: 
-  - docker run charlesonunze/react-with-react npm run test -- --coverage
+  - docker run charlesonunze/react-with-docker npm run test -- --coverage
