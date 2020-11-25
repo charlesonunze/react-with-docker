@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install: 
+  - docker build -f Dockerfile.dev -t charlesonunze/react-with-react .
+
+script: 
+  - docker run charlesonunze/react-with-react npm run test -- --coverage
